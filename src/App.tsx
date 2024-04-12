@@ -1,16 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import CardList from './components/CardList/CardList';
 import Search from './components/Search/Search';
-function App() {
-  return (
-    <div className="App">
-      <Search></Search>
-      <CardList></CardList>
-      
-    </div>
-  );
+import {Component} from 'react'
+import UserModel from './models/UserModel';
+import UsuarioModel from './models/UserModel';
+
+interface AppState {
+  usuarios: UsuarioModel[]; // Definir el tipo de usuarios como un array de cualquier tipo
+}
+
+class App extends Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      usuarios: []
+    };
+  ;
+  }
+
+  API_URL = "http://localhost:5237/";
+
+  componentDidMount() {
+    this.refreshUsuarios();
+  }
+
+  async refreshUsuarios() {
+    fetch(this.API_URL + "Usuario/")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ usuarios: data });
+      });
+  }
+
+  render() {
+    const { usuarios } = this.state;
+    return (
+      <div className="App">
+        <Search />
+        {usuarios.map(usuario=>
+        <p> Nombre:  {usuario.usuario}</p>  
+        )}
+      </div>
+    );
+  }
 }
 
 export default App;
