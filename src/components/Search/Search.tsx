@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState , MouseEvent, SyntheticEvent } from 'react'
+import React, { ChangeEvent, useState , SyntheticEvent } from 'react'
 
 type Props = {}
 
