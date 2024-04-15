@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from "../../imgs/IconoH.png"
-
+import "./Navbar.css"
 interface Props  {}
 
-const Navbar = (props: Props) => {
+const Navbar : React.FC<Props> = (props: Props) : JSX.Element =>  {
   return (
     
-    <nav className="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <nav className="navbar navbar-expand-sm  navbar-dark">
 		<div className="container-fluid">
 			
 			<a className="navbar-brand" href="#"><img src={logo} alt="" width="50px" /></a>
@@ -19,16 +19,15 @@ const Navbar = (props: Props) => {
 			<div className="collapse navbar-collapse" id="navbar_plegable">
 				
 				<ul className="navbar-nav me-auto">
-					<li className="nav-item"><a className="nav-link active" href="#">Home</a></li>
-					<li className="nav-item"><a className="nav-link" href="#">Blog</a></li>
-					
-					<li className="nav-item"><a className="nav-link" href="#">Contacto</a></li>
+					<li className="nav-item"><a className="nav-link " href="#">Inicio</a></li>
+					<li className="nav-item"><a className="nav-link" href="#">Médicos</a></li>				
+					<li className="nav-item"><a className="nav-link" href="#">Pacientes</a></li>
+					<li className="nav-item"><a className="nav-link" href="#">Citas</a></li>
 				</ul>
 
-				<form className="d-flex" action="#">
-					<input className="form-control me-2" type="text" placeholder="Buscar..." />
-					<button className="btn btn-outline-light" type="submit">Buscar</button>
-				</form>
+				<ul className="navbar-nav ">
+					<li className="nav-item"><a className="nav-link active" href="#">Login</a></li>
+				</ul>
 			</div>
 		</div>
 	</nav>

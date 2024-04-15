@@ -1,28 +1,21 @@
 import React from 'react'
 import "./Card.css"
 interface Props  {
-    companyName: string;
-    ticker : string;
-    price : number;
+    foto: string;
+    tipo : string;
+    
 }
 
-const Card : React.FC<Props> = ({ companyName,ticker,price}:  Props) : JSX.Element=> {
+const Card : React.FC<Props> = ({ foto,tipo}:  Props) : JSX.Element=> {
   return (
-    <div className="card">
-      <img
-        src="https://images.unsplash.com/photo-1612428978260-2b9c7df20150?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-        alt="Image"
-      />
-      <div className="details">
-        <h2>{companyName} ({ticker})</h2>
-        <p>${price}</p>
+    <div className='cartaAnim col mt-3 mb-3'>
+      <div className="card h-100 g-0">
+        <img className="card-img-top" src={foto} alt={foto} />
+        <div className="card-body">
+          <h2 className='card-title text-center'>{tipo}</h2>
+        </div>
       </div>
-      <p className="info">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni,
-        officia!
-      </p>
     </div>
   )
 }
-
 export default Card

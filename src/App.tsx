@@ -1,67 +1,32 @@
-import React from 'react';
 import './App.css';
-import Search from './components/Search/Search';
-import {Component} from 'react'
-import UsuarioModel from './models/UserModel';
-import { GetAllUsers, GetUserById } from './services/UsuarioService';
+import UsuarioModel from './Models/UserModel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Navbar from './components/Navbar/Navbar';
+import CardList from './components/CardList/CardList';
+import Footer from './components/Footer/Footer';
+import { Outlet } from 'react-router';
 
-interface AppState {
-  usuarios: UsuarioModel[] | string; // Definir el tipo de usuarios como un array de cualquier tipo
-}
+function App() {
 
-class App extends Component<{}, AppState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      usuarios: []
-    };
-  ;
-  }
 
-  
-  componentDidMount() {
-    this.refreshUsuarios();
-  }
-
-  async refreshUsuarios() {
-        const usuariossss  =  await GetAllUsers();
-        this.setState({usuarios : usuariossss});
-        <div>alog</div>
-  }
-
-  render() {
-    const alog= GetUserById(21);
-     let ahoraSi : UsuarioModel  ;
-    if(alog instanceof UsuarioModel){
-        ahoraSi=alog;
-        
-    }
-    const { usuarios } = this.state;
-    return (
-      <div className="container-fluid g-0 ">
+  return (
+    <>
+      <div className='todo'>
         <Navbar />
-        <button className="btn btn-primary">botón</button>
-        <Search />
+        <div className="container content ">
+
+          <Outlet />
+        </div>
         
-        {Array.isArray(usuarios) ? (
-          usuarios.map(usuario => (
-            <div className=''>
-
-                       
-              <p key={usuario.id}> Nombre: {usuario.usuario}   {usuario.id == 21 ? (
-                <div>¡Este es el usuario con ID 10!</div>
-            ):("") }   </p>
-              
-            </div>
-          ))
-        ) : (
-          <p>{usuarios}</p>
-        )}
+        <Footer />
       </div>
-    );
-  }
+    </>
+  );
 }
-
+<div>
+  <a href="https://www.flaticon.es/iconos-gratis/medico" title="médico iconos">Médico iconos creados por Freepik - Flaticon</a>
+  <a href="https://www.flaticon.es/iconos-gratis/paciente" title="paciente iconos">Paciente iconos creados por monkik - Flaticon</a>
+  <a href="https://www.flaticon.es/iconos-gratis/cita-medica" title="cita medica iconos">Cita medica iconos creados por photo3idea_studio - Flaticon</a>
+</div>
 export default App;
