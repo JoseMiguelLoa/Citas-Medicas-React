@@ -5,3 +5,7 @@
 .cartaAnim:hover {
     transform: scale(1.03); /* Escala el elemento al 110% de su tamaño original al pasar el cursor sobre él */
   }
+
+a {
+  text-decoration: none;
+}

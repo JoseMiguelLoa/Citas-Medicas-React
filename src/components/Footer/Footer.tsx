@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 interface Props {}
 
 const Footer = (props: Props) => {
@@ -22,7 +23,7 @@ const Footer = (props: Props) => {
 
             <div className="col-12 text-center col-sm-5 text-sm-start col-md-2 ">
                 <h3> <strong>Derechos de autor</strong></h3>
-                <a href='#'>Pagina de acreditación</a>
+                <Link to='acreditacion'>Pagina de acreditación</Link>
             </div>
         </div>
     </footer>

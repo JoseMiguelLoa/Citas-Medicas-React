@@ -1,5 +1,5 @@
 import axios from "axios";
-import UsuarioModel from "../Models/UserModel"
+import UsuarioModel from "../Models/ModelCreation/UsuarioModelCreation"
 
 const API_URL = "http://localhost:5237/Usuario/";
 
