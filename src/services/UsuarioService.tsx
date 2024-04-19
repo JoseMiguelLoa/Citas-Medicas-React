@@ -1,12 +1,13 @@
 import axios from "axios";
 import UsuarioModel from "../Models/ModelCreation/UsuarioModelCreation"
+import UsuarioModelObtain from "../Models/ModelObtain/UsuarioModelObtain";
 
 const API_URL = "http://localhost:5237/Usuario/";
 
 
 export const GetAllUsers = async () => {
   try {
-    const response = await axios.get<UsuarioModel[]>(API_URL);
+    const response = await axios.get<UsuarioModelObtain[]>(API_URL);
     const data = response.data;
       
     return data;
@@ -23,7 +24,7 @@ export const GetAllUsers = async () => {
 
 export const GetUserById = async (id : number) =>{
   try {
-    const response = await axios.get<UsuarioModel>(API_URL+`${id}`);
+    const response = await axios.get<UsuarioModelObtain>(API_URL+`${id}`);
     const data = response.data;
       
     return data;
@@ -37,22 +38,4 @@ export const GetUserById = async (id : number) =>{
     }
   }
 
-}
-
-export const CreateUser = async (nombre : string , apellidos : string , usuario : string, clave : string)=>{
-  try {
-    
-    const response = await axios.get<UsuarioModel>(API_URL);
-    const data = response.data;
-      
-    return data;
-  } catch (error) {
-    if (axios.isAxiosError(error)) {
-      console.log("Mensaje de error: ", error.message);
-      return error.message;
-    } else {
-      console.log("Error inesperado: " + error);
-      return "Error inesperado ha ocurrido";
-    }
-  }
 }

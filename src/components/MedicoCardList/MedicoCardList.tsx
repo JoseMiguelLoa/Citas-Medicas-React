@@ -1,10 +1,19 @@
 import React from 'react'
+import MedicoModelObtain from '../../Models/ModelObtain/MedicoModelObtain'
+import MedicoCard from '../MedicoCard/MedicoCard';
 
-type Props = {}
+interface Props  {
+  medicos : MedicoModelObtain[];  
+}
 
-const MedicoCardList = (props: Props) => {
+const MedicoCardList = ({medicos}: Props) => {
+  
   return (
-    <div>MedicoCardList</div>
+    <div className='row justify-content-left row-cols-1 row-cols-sm-2 row-cols-md-2  row-cols-xl-4 '>
+        {medicos.map(medico =>
+          <MedicoCard medico = {medico} />
+        )}
+    </div>
   )
 }
 

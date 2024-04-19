@@ -2,11 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { GetAllUsers } from './Services/UsuarioService';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './Routes/Routes';
 
-    console.log(GetAllUsers());
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
