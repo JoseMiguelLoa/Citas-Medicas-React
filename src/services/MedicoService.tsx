@@ -3,7 +3,7 @@ import MedicoModelObtain from '../Models/MedicoModel';
 import axios from 'axios';
 
 
-const API_URL = "http://localhost:5237/Medico/";
+const API_URL = "http://localhost:8080/Medico/";
 
 
 export const GetAllMedicos = async () => {

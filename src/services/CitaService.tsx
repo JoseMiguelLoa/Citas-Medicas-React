@@ -3,7 +3,7 @@ import React from 'react'
 import CitaModel from '../Models/CitaModel';
 import { GetAllMedicos } from './MedicoService';
 
-const API_URL = "http://localhost:5237/Cita/";
+const API_URL = "http://localhost:8080/Cita/";
 
 
 export const GetAllCitas = async () => {

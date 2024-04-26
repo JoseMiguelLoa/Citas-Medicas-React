@@ -4,7 +4,7 @@ import PacienteModel from '../Models/PacienteModel';
 import axios from 'axios';
 
 
-const API_URL = "http://localhost:5237/Paciente/";
+const API_URL = "http://localhost:8080/Paciente/";
 
 
 export const GetAllPacientes = async () => {

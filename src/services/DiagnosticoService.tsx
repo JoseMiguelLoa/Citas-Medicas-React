@@ -3,7 +3,7 @@ import React from 'react'
 import DiagnosticoModel from '../Models/DiagnosticoModel';
 import { GetAllMedicos } from './MedicoService';
 
-const API_URL = "http://localhost:5237/Diagnostico/";
+const API_URL = "http://localhost:8080/Diagnostico/";
 
 
 export const GetAllDiagnosticos = async () => {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import UsuarioModelObtain from "../Models/UsuarioModel";
 
-const API_URL = "http://localhost:5237/Usuario/";
+const API_URL = "http://localhost:8080/Usuario/";
 
 
 export const GetAllUsers = async () => {
