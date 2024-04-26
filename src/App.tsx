@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+    <link rel="icon" href="./imgs/IconoH.png" />
       <div className='todo'>
         <Navbar />
         <div className="container content ">

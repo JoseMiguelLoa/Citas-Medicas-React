@@ -1,0 +1,18 @@
+/* Estilos para la carta */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  /* Estilos para los campos de texto */
+  .card div {
+    margin-bottom: 10px;
+  }
+  
+  .card div:nth-child(even) {
+    color: #007bff; /* Cambia el color de los campos alternativos */
+  }
+

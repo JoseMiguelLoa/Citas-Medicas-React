@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import MedicoCard from '../../../components/MedicoCard/MedicoCard'
-import MedicoModelObtain from '../../../Models/ModelObtain/MedicoModelObtain'
 import { GetAllMedicos } from '../../../Services/MedicoService';
-import MedicoCardList from '../../../components/MedicoCardList/MedicoCardList';
+import MedicoCardList from '../../../components/MedicoComponents/MedicoCardList/MedicoCardList';
 import { Link } from 'react-router-dom';
+import MedicoModel from '../../../Models/MedicoModel';
 
 interface Props  {}
 
 const MedicoPage = (props: Props) => {
 
-  const [medicos,setMedicos] = useState<MedicoModelObtain[]>([]);
+  const [medicos,setMedicos] = useState<MedicoModel[]>([]);
 
   useEffect(() => {
     const refreshMedicos = async () => {
@@ -29,7 +28,7 @@ const MedicoPage = (props: Props) => {
   return (
     <>
       <MedicoCardList medicos={medicos}/>
-      <Link className='btn btn-success' to="formC">Crear Médico</Link>
+      <Link className='ms-3  btn btn-success' to="formC">Crear Médico</Link>
     </>
   )
 }

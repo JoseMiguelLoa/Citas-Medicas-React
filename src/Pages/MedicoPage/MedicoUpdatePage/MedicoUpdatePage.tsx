@@ -1,10 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import MedicoModelObtain from '../../../Models/ModelObtain/MedicoModelObtain';
-import UsuarioModelObtain from '../../../Models/ModelObtain/UsuarioModelObtain';
 import { useParams } from 'react-router-dom';
-import { GetUserById } from '../../../Services/UsuarioService';
-import { GetMedicoById } from '../../../Services/MedicoService';
-import MedicoFormUpdate from '../../../components/MedicoFormUpdate/MedicoFormUpdate';
+import MedicoFormUpdate from '../../../components/MedicoComponents/MedicoFormUpdate/MedicoFormUpdate';
 
 interface Props  {}
 
@@ -14,7 +9,11 @@ const MedicoUpdatePage = (props: Props) => {
 
   
   return (
-    <MedicoFormUpdate id={idnul} />
+    <div className="row justify-content-center align-items-center mt-5 ">
+      <div className="bordered col-5">
+        <MedicoFormUpdate id={idnul} />
+      </div>
+    </div>
   )
 }
 
