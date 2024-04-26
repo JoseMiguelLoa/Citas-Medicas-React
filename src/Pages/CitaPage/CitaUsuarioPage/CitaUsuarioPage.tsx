@@ -67,6 +67,7 @@ const CitaUsuarioPage = (props: Props) => {
   else
     return (
       <> 
+        {console.log(usuario)}
         <div>No se ha podido encontrar el usuario</div>
       </>
     )

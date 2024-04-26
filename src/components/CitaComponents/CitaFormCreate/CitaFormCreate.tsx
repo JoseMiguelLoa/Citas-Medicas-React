@@ -51,13 +51,9 @@ const CitaFormCreate = (props: Props) => {
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         const fechaHoraInput = document.getElementById('fechaHora') as HTMLInputElement;
-        const valorFechaHora = fechaHoraInput.value;
-        console.log(valorFechaHora);
-        const fechaUTC = new Date(valorFechaHora).toUTCString()
-        console.log(fechaUTC)
-        const fechaHoraSeleccionada = new Date(fechaUTC);
+        const fechaHoraSeleccionada = new Date(fechaHoraInput.value);
         
-        fechaHoraSeleccionada.setMinutes(fechaHoraSeleccionada.getMinutes()-fechaHoraSeleccionada.getTimezoneOffset());
+//        fechaHoraSeleccionada.setMinutes(fechaHoraSeleccionada.getMinutes()-fechaHoraSeleccionada.getTimezoneOffset());
 
         const pacienteIdE = (document.getElementById('pacienteId') as HTMLInputElement).value;
         const medicoIdE = (document.getElementById('medicoId') as HTMLInputElement).value;
