@@ -9,7 +9,7 @@ interface Props  {
 
 const ButtonVolver = ({donde , tm}: Props)  => {
   return (
-    <Link to={donde} className={`btn btn-warning col-${tm}`}>Volver</Link>
+    <Link id="volver" to={donde} className={`btn btn-warning col-${tm}`}>Volver</Link>
   )
 }
 

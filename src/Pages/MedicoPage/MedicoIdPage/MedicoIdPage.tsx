@@ -101,7 +101,7 @@ const MedicoIdPage = (props: Props) => {
         
 
         <div className='row justify-content-around align-items-center mt-4'>
-          <Link  className='btn btn-success col-2' to={`/medico/formU/${medico?.id}`}>Modificar</Link>
+          <Link id="modificar" className='btn btn-success col-2' to={`/medico/formU/${medico?.id}`}>Modificar</Link>
           
           {idNumero !== null && (
             <button id='borrar' type="button" onClick={() => DeleteMedico(idNumero)} className='btn btn-danger col-2'>Borrar </button>

@@ -10,9 +10,9 @@ interface Props  {
 const CardList: React.FC<Props> = (props: Props):JSX.Element => {
   return (
     <div className='row justify-content-between row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 '>
-        <Card donde='medico' foto = {medicoF} tipo='Médicos'/>
-        <Card donde='paciente' foto = {pacienteF} tipo='Pacientes'/>
-        <Card donde='cita' foto = {citaMedicaF} tipo='Citas'/>
+        <Card id ={1} donde='medico' foto = {medicoF} tipo='Médicos'/>
+        <Card id ={2} donde='paciente' foto = {pacienteF} tipo='Pacientes'/>
+        <Card id ={3} donde='cita' foto = {citaMedicaF} tipo='Citas'/>
     </div>
   )
 }
