@@ -107,7 +107,7 @@ const MedicoIdPage = (props: Props) => {
             <button id='borrar' type="button" onClick={() => DeleteMedico(idNumero)} className='btn btn-danger col-2'>Borrar </button>
           )}
           <Link id='citas' className='btn btn-success col-2' to={`/cita/usuario/${medico.id}`}>Citas</Link>
-          <ButtonVolver tm={2} donde='/medico' />
+          <ButtonVolver  tm={2} donde='/medico' />
 
             
         </div>

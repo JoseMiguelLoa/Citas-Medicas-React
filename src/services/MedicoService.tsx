@@ -95,7 +95,9 @@ export const UpdateMedico = async (ids : number,nombre : string , apellidos : st
 export const DeleteMedico = async (id : number) =>{
     try{
         const response =await axios.delete(API_URL+`${id}`);
-        window.history.back();
+        console.log("Buenas tardes");
+        window.location.href = '/medico'
+        console.log("buenas noches ")
         return response.data;
 
     }catch(error){

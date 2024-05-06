@@ -102,7 +102,7 @@ export const UpdatePaciente = async (ids : number,nombre : string , apellidos : 
 export const DeletePaciente = async (id : number) =>{
     try{
       const response =await axios.delete(API_URL+`${id}`);
-      window.history.back();
+      window.location.href = '/paciente'
       return response.data;
       
     }catch(error){

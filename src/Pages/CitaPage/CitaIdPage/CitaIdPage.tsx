@@ -63,19 +63,19 @@ const CitaIdPage = (props: Props) => {
             <div className='col-12 col-md-5 '>Fecha: {fechaHoraR.getDate()}/{(fechaHoraR.getMonth()+1)}/{fechaHoraR.getFullYear()}</div>
             <div className='col-12 col-md-5 '>Hora: {fechaHoraR.getHours()}:{fechaHoraR.getMinutes()} </div>
             <div className='col-12 col-md-5 '>ID Paciente: <Link className='text-dark text-decoration-underline'  to={`/paciente/${cita?.pacienteId}`}>{cita?.pacienteId}</Link></div>
-            <div className='col-12 col-md-5 '>ID Medico: <Link className=' text-decoration-underline'  to={`/medico/${cita?.medicoId}`}>{cita?.medicoId}</Link></div>
+            <div className='col-12 col-md-5 '>ID Médico: <Link className=' text-decoration-underline'  to={`/medico/${cita?.medicoId}`}>{cita?.medicoId}</Link></div>
             <div className='col-12 col-md-5 '>Atributo: {cita?.attribute11}</div>
             <div className='col-12 col-md-5 '>Motivo: {cita?.motivoCita}</div>
           </div>
   
           <div className='row justify-content-around align-items-center mt-4'>
-            <Link className='btn btn-success col-2 ' to={`/cita/formU/${cita?.id}`}>Modificar</Link>
+            <Link id="modificar" className='btn btn-success col-2 ' to={`/cita/formU/${cita?.id}`}>Modificar</Link>
             
             {idNumero !== null && (
-              <button type="button" onClick={() => DeleteCita(idNumero)} className='btn btn-danger col-2'>Borrar </button>
+              <button id="borrar" type="button" onClick={() => DeleteCita(idNumero)} className='btn btn-danger col-2'>Borrar </button>
             )}
-            {hayDiag && (<Link className='btn btn-primary col-2' to={`/diagnostico/${diagnosticoId}`}>Diagnóstico</Link>)}
-            {!hayDiag && (<Link className='btn btn-success col-2' to={`/diagnostico/formC/${idNumero}`}>Diagnóstico</Link>)}
+            {hayDiag && (<Link id="verD" className='btn btn-primary col-2' to={`/diagnostico/${diagnosticoId}`}>Diagnóstico</Link>)}
+            {!hayDiag && (<Link id="crearD" className='btn btn-success col-2' to={`/diagnostico/formC/${idNumero}`}>Diagnóstico</Link>)}
             <ButtonVolver tm={2} donde='/cita' />
   
               

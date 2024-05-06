@@ -8,8 +8,8 @@ interface Props  {
 
 const MedicoCard  : React.FC<Props> = ( {medico} : Props) : JSX.Element=>{
   return (
-    <div id={`${medico.id}`} key={medico.id} className='cartaAnim col-auto mt-3 mb-3'>
-      <Link to={`/medico/${medico.id}`}>
+    <div key={medico.id} className='cartaAnim col-auto mt-3 mb-3'>
+      <Link id={`${medico.id}`}  to={`/medico/${medico.id}`}>
         <div className="card p-1">
           <p className='card-text '>Número de colegiado: {medico.numColegiado}</p>
         </div>

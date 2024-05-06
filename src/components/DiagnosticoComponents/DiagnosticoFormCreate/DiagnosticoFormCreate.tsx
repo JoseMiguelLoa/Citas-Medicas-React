@@ -23,15 +23,15 @@ const DiagnosticoFormCreate = ({id}: Props) => {
           <h2 className='text-center'>Crear Nuevo Diagnóstico</h2>
           <form className='form-control' onSubmit={handleSubmit}>
             <div className='form-floating'>
-              <input name='ValoracionEspecialista' maxLength={LongMax}  placeholder='' minLength={LongMin} className="form-control" type="text" value={valoracionEspecialista} required onChange={(e) => setValoracionEspecialista(e.target.value)} />
+              <input id="valoracionEspecialista" name='ValoracionEspecialista' maxLength={LongMax}  placeholder='' minLength={LongMin} className="form-control" type="text" value={valoracionEspecialista} required onChange={(e) => setValoracionEspecialista(e.target.value)} />
               <label  htmlFor='ValoracionEspecialista' className='form-label' >Valoracion del especialista:</label>
             </div>
             <div className='form-floating'>
-              <input name='Enfermedad' maxLength={LongMax}   placeholder=''  minLength={LongMin} className="form-control" type="text" value={enfermedad} required onChange={(e) => setEnfermedad(e.target.value)} />
+              <input id="enfermedad" name='Enfermedad' maxLength={LongMax}   placeholder=''  minLength={LongMin} className="form-control" type="text" value={enfermedad} required onChange={(e) => setEnfermedad(e.target.value)} />
               <label  htmlFor='Enfermedad' className="form-label">Enfermedad:</label>
             </div>
             <div className='row justify-content-around align-items-center mb-2 mt-2'>
-              <button  className="col-5 btn btn-success  " type="submit">Crear</button>
+              <button  id="crear" className="col-5 btn btn-success  " type="submit">Crear</button>
               <ButtonVolver tm={5} donde={`/cita/${id}`}/>
             </div>
     

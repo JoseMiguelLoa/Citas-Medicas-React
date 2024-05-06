@@ -27,7 +27,7 @@ const CitaPage = (props: Props) => {
   return (
     <>
       <CitaCardList citas={citas}/>
-      <Link className='ms-3  btn btn-success' to="formC">Crear Cita</Link>
+      <Link id="crear" className='ms-3  btn btn-success' to="formC">Crear Cita</Link>
     </>
   )
 }

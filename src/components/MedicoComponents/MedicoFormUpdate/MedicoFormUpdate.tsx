@@ -68,25 +68,25 @@ const MedicoFormUpdate = ({id}: Props) => {
       <h2 className='text-center'>Modificar Médico</h2>
       <form className='form-control' onSubmit={handleSubmit}>
         <div className='form-floating'>
-          <input name='nombre' maxLength={LongMax}   placeholder='' minLength={LongMin} className="form-control" type="text" value={nombre} required onChange={(e) => setNombre(e.target.value)} />
+          <input id="nombre" name='nombre' maxLength={LongMax}   placeholder='' minLength={LongMin} className="form-control" type="text" value={nombre} required onChange={(e) => setNombre(e.target.value)} />
           <label  htmlFor='nombre' className='form-label' >Nombre:</label>
         </div>
         <div className='form-floating'>
-          <input name='apellidos'  maxLength={LongMax}  placeholder=''  minLength={LongMin} className="form-control" type="text" value={apellidos} required onChange={(e) => setApellidos(e.target.value)} />
+          <input id="apellidos" name='apellidos'  maxLength={LongMax}  placeholder=''  minLength={LongMin} className="form-control" type="text" value={apellidos} required onChange={(e) => setApellidos(e.target.value)} />
           <label  htmlFor='apellidos' className="form-label">Apellidos:</label>
         </div>
         <div className='form-floating'>
-          <input name='usuario' maxLength={LongMax}   placeholder=''  minLength={LongMin} className="form-control"  type="text" value={usuario} required onChange={(e) => setUsuario(e.target.value)} />
+          <input id="usuario" name='usuario' maxLength={LongMax}   placeholder=''  minLength={LongMin} className="form-control"  type="text" value={usuario} required onChange={(e) => setUsuario(e.target.value)} />
           <label  htmlFor='usuario' className="form-label">Usuario:</label>
         </div>
 
         <div  className='form-floating'>
-          <input name='numColegiado' maxLength={LongMax}   placeholder=''  className="form-control"   minLength={LongMin} type="text" value={numColegiado} required onChange={(e) => setNumColegiado(e.target.value)} />
+          <input id="numColegiado" name='numColegiado' maxLength={LongMax}   placeholder=''  className="form-control"   minLength={LongMin} type="text" value={numColegiado} required onChange={(e) => setNumColegiado(e.target.value)} />
           <label  htmlFor='numColegiado' className="form-label">Número Colegiado:</label>
         </div>
         <div className='text-center row align-item-center justify-content-around mt-3 mb-1'>
-          <button  className=" col-3 btn btn-success " type="submit">Modificar </button>
-          <Link className=" col-3 btn btn-warning " to={`/medico/${id}`} >Volver </Link>
+          <button id="modificar"  className=" col-3 btn btn-success " type="submit">Modificar </button>
+          <Link id="volver" className=" col-3 btn btn-warning " to={`/medico/${id}`} >Volver </Link>
         </div>
       </form>
   </div>

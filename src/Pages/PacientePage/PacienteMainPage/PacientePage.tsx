@@ -27,7 +27,7 @@ const PacientePage = (props: Props) => {
   return (
     <>
       <PacienteCardList pacientes={pacientes}/>
-      <Link className='ms-4 btn btn-success' to="formC">Crear Paciente</Link>
+      <Link id="crear" className='ms-4 btn btn-success' to="formC">Crear Paciente</Link>
     </>
   )
 }

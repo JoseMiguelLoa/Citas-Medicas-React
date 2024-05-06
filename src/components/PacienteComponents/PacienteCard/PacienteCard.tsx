@@ -9,8 +9,8 @@ interface Props  {
 const PacienteCard = ( {paciente}: Props) => {
   return (
       
-      <div key={paciente.id} id={`${paciente.id}`} className='cartaAnim col-auto mt-3 mb-3'>
-        < Link to={`/paciente/${paciente.id}`}>
+      <div key={paciente.id} className='cartaAnim col-auto mt-3 mb-3'>
+        < Link id={`${paciente.id}`}  to={`/paciente/${paciente.id}`}>
           <div className="card p-1">
             <p className='card-text '>Número de la seguridad social: {paciente.nss}</p>
           </div>
